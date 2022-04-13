@@ -1,3 +1,4 @@
+#Collisions per hour where women participated and there were 3 injuries
 import os
 from datetime import datetime
 from pyspark import SparkContext, SparkConf

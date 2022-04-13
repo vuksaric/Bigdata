@@ -1,3 +1,4 @@
+#The average age of the car in a collision
 import os
 from datetime import datetime
 from pyspark import SparkContext, SparkConf

@@ -1,3 +1,4 @@
+#The sum, average, minimum and maximum of the people who participated as passengers in the collision
 import os
 from datetime import datetime
 from pyspark import SparkContext, SparkConf

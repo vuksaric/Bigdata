@@ -1,3 +1,4 @@
+#Number of collisions per month and time
 import os
 from datetime import datetime
 from pyspark import SparkContext, SparkConf

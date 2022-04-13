@@ -17,7 +17,7 @@ while True:
         print(e)
         time.sleep(1)
 
-response_API = requests.get('https://api.worldweatheronline.com/premium/v1/past-weather.ashx?q=New+York&date=2012-01-01&enddate=2012-02-20&key=2543a789e544477b9e7142621221004&format=json', verify=False)
+response_API = requests.get('https://api.worldweatheronline.com/premium/v1/past-weather.ashx?q=New+York&date=2012-10-01&enddate=2012-10-30&key=2543a789e544477b9e7142621221004&format=json', verify=False)
 
 data = response_API.json()
 print(data)
@@ -56,13 +56,21 @@ for weather in data["data"]["weather"]:
         data["Wind_5"] = weather["hourly"][5]["windspeedKmph"]
         data["Visibility_5"] = weather["hourly"][5]["visibility"]
         data["Precipitation_5"] = weather["hourly"][5]["precipMM"]
+        data["Temp_6"] = weather["hourly"][6]["tempC"]
+        data["Wind_6"] = weather["hourly"][6]["windspeedKmph"]
+        data["Visibility_6"] = weather["hourly"][6]["visibility"]
+        data["Precipitation_6"] = weather["hourly"][6]["precipMM"]
+        data["Temp_7"] = weather["hourly"][7]["tempC"]
+        data["Wind_7"] = weather["hourly"][7]["windspeedKmph"]
+        data["Visibility_7"] = weather["hourly"][7]["visibility"]
+        data["Precipitation_7"] = weather["hourly"][7]["precipMM"]
 
         print(data)
         data_dumps = json.dumps(data)
         print(data_dumps)
         producer.send(TOPIC,key=bytes(weather["date"], 'utf-8'),value=bytes(data_dumps,"utf-8"))
         print("POSLAO")
-        time.sleep(3)
+        time.sleep(5)
     except Exception as e:
         print('Exception')
         print(e)

@@ -1,0 +1,13 @@
+1. docker-compose up
+2. docker exec -it spark-master bash
+3. cd home/batch/
+4. /spark/bin/spark-submit preprocessing.py
+5. /spark/bin/spark-submit primer1.py (obrisati na hue rezultat, ako postoji)
+   /spark/bin/spark-submit primer2.py (obrisati na hue rezultat, ako postoji)
+   /spark/bin/spark-submit primer3.py (obrisati na hue rezultat, ako postoji)
+   /spark/bin/spark-submit primer4.py (obrisati na hue rezultat, ako postoji)
+   /spark/bin/spark-submit primer5.py (obrisati na hue rezultat, ako postoji)
+   /spark/bin/spark-submit primer6.py (obrisati na hue rezultat, ako postoji)
+   /spark/bin/spark-submit primer7.py (obrisati na hue rezultat, ako postoji)
+   /spark/bin/spark-submit primer8.py (obrisati na hue rezultat, ako postoji)
+   /spark/bin/spark-submit primer9.py (obrisati na hue rezultat, ako postoji)
